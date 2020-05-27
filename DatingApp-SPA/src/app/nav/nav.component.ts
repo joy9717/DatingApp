@@ -20,4 +20,12 @@ model: any = {};
      console.log('Failed to login') ;
    });
 }
+loggedIn(){
+  const token = localStorage.getItem('token');
+  return !!token;
+}
+loggedOut(){
+  localStorage.removeItem('token');
+  console.log('logged out');
+}
 }

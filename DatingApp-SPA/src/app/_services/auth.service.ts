@@ -16,7 +16,10 @@ return this.http.post(this.baseUrl + 'login', model).pipe(
       localStorage.setItem('token', user.token);
     }
   })
-)
+);
 }
 
+register(model:any){
+  return this.http.post(this.baseUrl + 'register', model);
+}
 }
